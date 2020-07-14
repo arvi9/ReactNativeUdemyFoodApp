@@ -7,6 +7,8 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
     <View style={styles.backgroundStyle}>
       <Feather name="search" style={styles.iconStyle} />
       <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
         style={styles.inputStyle}
         placeholder="Search"
         value={term}
@@ -20,12 +22,12 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
 const styles = StyleSheet.create({
   backgroundStyle: {
     marginTop: 10,
-    backgroundColor: "#ebd8dd",
+    backgroundColor: "#F0EEEE",
     height: 50,
     borderRadius: 5,
-    marginHorizontal: 16,
+    marginHorizontal: 15,
     flexDirection: "row",
-    alignItems: "center",
+    marginBottom: 10,
   },
   inputStyle: {
     flex: 1,
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
   iconStyle: {
     fontSize: 35,
     alignSelf: "center",
-    marginHorizontal: 16,
+    marginHorizontal: 15,
   },
 });
 
